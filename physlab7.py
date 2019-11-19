@@ -18,7 +18,7 @@ def convertToDegrees(degrees, minutes):
 
 def avg(a,b):
 	assert len(a) == len(b)
-	sums = [x+y for x,y in zip(a,b)]
+	sums = [x-y for x,y in zip(a,b)]
 	sums = [x/2 for x in sums]
 	return sums
 
@@ -37,7 +37,7 @@ def errorNi(R,d,m,theta_rad, err_d, err_th):
 m = 1
 left_yellow = 159 +  33/60
 right_yellow = 201 + 22/60
-avgDegLC = (left_yellow + right_yellow)/2
+avgDegLC = (left_yellow - right_yellow)/2
 rads = np.radians(avgDegLC)
 wavelength = 5.8756 * 10**(-7)
 latticeConst = abs(m*wavelength/(math.sin(rads))) 
