@@ -101,6 +101,6 @@ err_gamma_count = [math.sqrt(x)/x for x in gamma_count] #1/x * err_x
 err_gamma_thickness = [0] * len(gamma_plates)
 mu, mu_err = gammaPlot(gamma_cm_thickness, gamma_log_count, err_gamma_thickness, err_gamma_count)
 print("Absorption coeff: ", -1*mu, " Error: ", mu_err)
-print("Ray Energy: ", 0.94, " MeV, Falls in accpeted range (10^4 to 10^7 eV)")
+print("Ray Energy: ", 0.55, " MeV, Accepted is 0.662 MeV")
 
 
