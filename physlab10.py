@@ -89,13 +89,13 @@ print("Range Obtained: ", 0.05, " cm, Obtained by observation" )
 print("Range Expected: ", rng_exp)
 
 print("=== Gamma ===")
-backgroundcounts=19; #counts
+background_counts = 19;
 plate_thickness_cm = 0.15748
 gammaRAW = pd.read_csv('gamma.csv')
 gamma_data = np.transpose(gammaRAW.values)
 gamma_plates = gamma_data[0] #milis
 gamma_count = gamma_data[1] #count
-gamma_log_count = [math.log(x-backgroundcounts) for x in gamma_count]
+gamma_log_count = [math.log(x-background_counts) for x in gamma_count]
 gamma_cm_thickness = [x*plate_thickness_cm for x in gamma_plates]
 err_gamma_count = [math.sqrt(x)/x for x in gamma_count] #1/x * err_x
 err_gamma_thickness = [0] * len(gamma_plates)
