@@ -98,5 +98,3 @@ print(ni_vals_ord1, " Errors: ", err_ni_o1)
 print("Order 2")
 print(Order2_col)
 print(ni_vals_ord2, " Errors: ", err_ni_o2)
-
-
