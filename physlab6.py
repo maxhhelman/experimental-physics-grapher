@@ -60,13 +60,13 @@ def airPlot(x,y, x_error, y_error):
 	plt.show()
 	return A, B, Aerr, Berr
 	
-#Part 1 Errors
+# Part 1 Errors
 errM = 1
 errX = 0.5
 errDm = math.sqrt(errX**2 + errX**2)
 m = 20
 
-#Part 1 Read Data
+# Part 1 Read Data
 fpRaw = pd.read_csv('dataFarbyPerot.csv')
 fpVals = np.transpose(fpRaw.values)
 fpXi = fpVals[1]
@@ -91,11 +91,11 @@ print("Wavelength: ", fp_lambdaMean, " Error: ", fp_err_lambdaMean, " micro mete
 print("Michelson")
 print("Wavelength: ", mi_lambdaMean, " Error: ", mi_err_lambdaMean, " micro meters")
 
-#Part 2 Values
+# Part 2 Values
 d = 3 #cm
 P_atm = 76 #cmHg
-#https://en.wikipedia.org/wiki/Helium%E2%80%93neon_laser
-lambda_0 = 632.991 #nm #POTENTIAL BS
+# https://en.wikipedia.org/wiki/Helium%E2%80%93neon_laser
+lambda_0 = 632.991 # nm # POTENTIAL BS
 err_p = 1
 err_m_air = 1 
 airRaw = pd.read_csv('air.csv')
@@ -113,7 +113,7 @@ print("C: ", air_A, " Error: ",air_Aerr)
 print("n air: ", nAir, " error: ", math.sqrt( ((deltaP[0]*air_Aerr)**2) + ((air_A*err_p)**2) ) )
 
 
-#Part 3
+# Part 3
 err_glass_th = 0.5 * 10**(-3)
 err_theta = 0.05
 err_m_glass = 2
